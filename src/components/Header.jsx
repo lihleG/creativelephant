@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-primary-100">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Top Bar - Contact Info */}
         <div className="hidden lg:flex justify-between items-center py-3 border-b border-primary-50 text-sm text-primary-700">
           <div className="flex items-center space-x-6">
@@ -69,18 +69,23 @@ const Header = () => {
         </div>
 
         {/* Main Header */}
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <img 
               src={logo} 
               alt="Creative Elephant Logo" 
-              className="h-14 w-auto object-contain"
+              className="h-10 sm:h-12 w-auto object-contain"
             />
-            <div>
-              <h1 className="text-2xl font-bold text-neutral-800">CreativElephant</h1>
-              <p className="text-sm text-primary-600">Good Design is Good Business</p>
+            <div className="hidden sm:block">
+              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-neutral-800">CreativElephant</h1>
+              <p className="text-xs sm:text-sm text-primary-600 hidden lg:block">Good Design is Good Business</p>
             </div>
+          </div>
+
+          {/* Mobile-only business name (without tagline) */}
+          <div className="sm:hidden">
+            <h1 className="text-lg font-bold text-neutral-800">CreativElephant</h1>
           </div>
 
           {/* Desktop Navigation */}
