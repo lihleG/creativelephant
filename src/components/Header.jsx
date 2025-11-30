@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaFacebook, FaWhatsapp, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import { FaTiktok } from 'react-icons/fa6';
 import { RiInstagramFill } from 'react-icons/ri';
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/logo.JPG';
 import QuoteModal from './QuoteModal';
 
 const Header = () => {
@@ -17,11 +17,11 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <FaPhone className="w-3 h-3 text-primary-500" />
-              <span>+27 67 112 9459</span>
+              <span>+27 67 111 9668</span>
             </div>
             <div className="flex items-center space-x-2">
               <FaEnvelope className="w-3 h-3 text-primary-500" />
-              <span>creativeelephant1@gmail.com</span>
+              <span>Quotes@creativeelephant.co.za</span>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -52,7 +52,7 @@ const Header = () => {
                 <RiInstagramFill className="w-4 h-4" />
               </a>
               <a 
-                href="https://wa.me/27671129459" 
+                href="https://wa.me/2761119668" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#25D366] hover:text-[#20B858] transition-colors"
@@ -168,7 +168,7 @@ const Header = () => {
                   <RiInstagramFill className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://wa.me/27671129459" 
+                  href="https://wa.me/27671119668" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#25D366] hover:text-[#20B858] transition-colors"
