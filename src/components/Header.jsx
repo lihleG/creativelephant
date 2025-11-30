@@ -9,6 +9,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
+  // Function to handle mobile link clicks
+  const handleMobileLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-primary-100">
       <div className="container mx-auto px-6">
@@ -52,7 +57,7 @@ const Header = () => {
                 <RiInstagramFill className="w-4 h-4" />
               </a>
               <a 
-                href="https://wa.me/2761119668" 
+                href="https://wa.me/27671119668" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#25D366] hover:text-[#20B858] transition-colors"
@@ -135,11 +140,41 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-primary-100">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="text-neutral-700 hover:text-primary-600 font-medium py-2">Home</a>
-              <a href="#services" className="text-neutral-700 hover:text-primary-600 font-medium py-2">Services</a>
-              <a href="#portfolio" className="text-neutral-700 hover:text-primary-600 font-medium py-2">Our Work</a>
-              <a href="#about" className="text-neutral-700 hover:text-primary-600 font-medium py-2">About</a>
-              <a href="#contact" className="text-neutral-700 hover:text-primary-600 font-medium py-2">Contact</a>
+              <a 
+                href="#home" 
+                className="text-neutral-700 hover:text-primary-600 font-medium py-2"
+                onClick={handleMobileLinkClick}
+              >
+                Home
+              </a>
+              <a 
+                href="#services" 
+                className="text-neutral-700 hover:text-primary-600 font-medium py-2"
+                onClick={handleMobileLinkClick}
+              >
+                Services
+              </a>
+              <a 
+                href="#portfolio" 
+                className="text-neutral-700 hover:text-primary-600 font-medium py-2"
+                onClick={handleMobileLinkClick}
+              >
+                Our Work
+              </a>
+              <a 
+                href="#about" 
+                className="text-neutral-700 hover:text-primary-600 font-medium py-2"
+                onClick={handleMobileLinkClick}
+              >
+                About
+              </a>
+              <a 
+                href="#contact" 
+                className="text-neutral-700 hover:text-primary-600 font-medium py-2"
+                onClick={handleMobileLinkClick}
+              >
+                Contact
+              </a>
               
               {/* Mobile Social Media Icons */}
               <div className="flex justify-center space-x-4 pt-4 border-t border-gray-200">
@@ -148,6 +183,7 @@ const Header = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#1877F2] hover:text-[#166FE5] transition-colors"
+                  onClick={handleMobileLinkClick}
                 >
                   <FaFacebook className="w-5 h-5" />
                 </a>
@@ -156,6 +192,7 @@ const Header = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-800 hover:text-black transition-colors"
+                  onClick={handleMobileLinkClick}
                 >
                   <FaTiktok className="w-5 h-5" />
                 </a>
@@ -164,6 +201,7 @@ const Header = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#E4405F] hover:text-[#D82C4B] transition-colors"
+                  onClick={handleMobileLinkClick}
                 >
                   <RiInstagramFill className="w-5 h-5" />
                 </a>
@@ -172,6 +210,7 @@ const Header = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#25D366] hover:text-[#20B858] transition-colors"
+                  onClick={handleMobileLinkClick}
                 >
                   <FaWhatsapp className="w-5 h-5" />
                 </a>
