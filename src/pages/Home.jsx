@@ -16,7 +16,8 @@ import {
   FaAward,
   FaRocket,
   FaClock,
-  FaHeadset
+  FaHeadset,
+  FaGoogle
 } from 'react-icons/fa';
 import { 
   HiAcademicCap,
@@ -28,6 +29,30 @@ import {
 } from 'react-icons/hi';
 
 const Home = () => {
+  // Google My Business Review Link - CORRECT URL
+  const GOOGLE_REVIEW_URL = 'https://share.google/bg157YKxAQb5IwHRP';
+
+  const openGoogleReview = () => {
+    window.open(GOOGLE_REVIEW_URL, '_blank', 'noopener,noreferrer');
+  };
+
+  // Social Media Sharing
+  const shareOnSocialMedia = () => {
+    const shareText = "I had an amazing experience with Creative Elephant! Their design and printing services are top-notch. Check them out!";
+    const shareUrl = "https://creativeelephant.co.za";
+    
+    if (navigator.share) {
+      navigator.share({
+        title: 'My Experience with Creative Elephant',
+        text: shareText,
+        url: shareUrl,
+      });
+    } else {
+      // Fallback for desktop
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=600,height=400');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50">
       {/* Hero Section */}
@@ -222,11 +247,17 @@ const Home = () => {
             </div>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-pink-700 hover:bg-pink-50 px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center">
-                <HiAcademicCap className="mr-2" />
+              <button 
+                onClick={openGoogleReview}
+                className="bg-white text-pink-700 hover:bg-pink-50 px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+              >
+                <FaGoogle className="mr-2" />
                 Leave a Google Review
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-pink-700 px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center">
+              <button 
+                onClick={shareOnSocialMedia}
+                className="border-2 border-white text-white hover:bg-white hover:text-pink-700 px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
+              >
                 <HiTrendingUp className="mr-2" />
                 Share on Social Media
               </button>
