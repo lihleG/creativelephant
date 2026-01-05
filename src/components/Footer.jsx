@@ -110,7 +110,7 @@ const Footer = () => {
                 <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center shadow-lg">
                   <HiMail className="text-white text-sm" />
                 </div>
-                <span>Quotes@creativelephant.co.za</span>
+                <span>admin@creativelephant.co.za</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center shadow-lg">
