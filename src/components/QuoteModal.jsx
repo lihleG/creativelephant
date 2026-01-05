@@ -165,7 +165,7 @@ const handleServiceSelect = (serviceId) => {
     }));
 
     const templateParams = {
-      to_email: 'quotes@creativeelephant.co.za',
+      to_email: 'admin@creativelephant.co.za',
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone || 'Not provided',

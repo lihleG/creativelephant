@@ -201,7 +201,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800">Email Us</h3>
-                      <p className="text-gray-600">Quotes@creativelephant.co.za</p>
+                      <p className="text-gray-600">admin@creativelephant.co.za</p>
                     </div>
                   </div>
 

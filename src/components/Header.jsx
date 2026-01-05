@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <FaEnvelope className="w-3 h-3 text-primary-500" />
-              <span>Quotes@creativeelephant.co.za</span>
+              <span>admin@creativelephant.co.za</span>
             </div>
           </div>
           <div className="flex items-center space-x-4">
