@@ -43,7 +43,7 @@ const Footer = () => {
                   <FaFacebook className="text-white text-lg group-hover:scale-110 transition-transform" />
                 </a>
                 <a 
-                  href="https://www.tiktok.com/@creativelephant" 
+                  href="https://www.tiktok.com/@creativelephantbranding" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-black transition-all duration-300 group shadow-lg transform hover:scale-110"
